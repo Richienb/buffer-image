@@ -18,7 +18,11 @@
 		"test": "xo && ava"
 	},
 	"keywords": [],
-	"dependencies": {},
+	"dependencies": {
+		"bigint-buffer": "^1.1.5",
+		"jimp": "^0.13.0",
+		"lzma-purejs": "^0.9.3"
+	},
 	"devDependencies": {
 		"ava": "^3.8.1",
 		"eslint-config-richienb": "^0.4.2",
