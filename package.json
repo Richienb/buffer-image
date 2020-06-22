@@ -1,6 +1,6 @@
 {
 	"name": "buffer-image",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Convert a buffer to and from png image data.",
 	"repository": "https://github.com/Richienb/buffer-image.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
