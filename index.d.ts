@@ -1,15 +1,36 @@
-/**
-My awesome module.
-@param input Lorem ipsum.
-@param postfix Lorem ipsum.
-@example
-```
-const theModule = require("the-module");
+declare const bufferImage: {
+	/**
+	Convert a buffer to a png buffer.
+	@param input The buffer to convert.
+	@example
+	```
+	const bufferImage = require("buffer-image");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
-```
-*/
-declare function theModule(input: string, { postfix }: { postfix?: string }): string
+	(async () => {
+		const result = await bufferImage(Buffer.from("Hello World"));
 
-export = theModule
+		console.log(result);
+	})();
+	```
+	*/
+	(input: Buffer): Buffer
+
+	/**
+	Convert a png buffer to a buffer.
+	@param input The buffer to convert.
+	@example
+	```
+	const bufferImage = require("buffer-image");
+	const imageBuffer = require("./image-buffer");
+
+	(async () => {
+		const result = await bufferImage.from(imageBuffer);
+
+		console.log(result);
+	})();
+	```
+	*/
+	from(input: Buffer): Buffer
+}
+
+export = bufferImage

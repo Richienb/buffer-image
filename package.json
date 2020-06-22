@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "buffer-image",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Convert a buffer to and from png image data.",
+	"repository": "https://github.com/Richienb/buffer-image.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,11 +17,22 @@
 		"lint": "xo",
 		"test": "xo && ava"
 	},
-	"keywords": [],
+	"keywords": [
+		"buffer",
+		"image",
+		"png",
+		"encode",
+		"decode",
+		"encrypt",
+		"hide",
+		"conceal",
+		"reveal",
+		"data"
+	],
 	"dependencies": {
-		"bigint-buffer": "^1.1.5",
 		"jimp": "^0.13.0",
-		"lzma-purejs": "^0.9.3"
+		"lzma-purejs": "^0.9.3",
+		"steggy-noencrypt": "^2.0.3"
 	},
 	"devDependencies": {
 		"ava": "^3.8.1",

@@ -1,41 +1,41 @@
-# the-module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# buffer-image [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/buffer-image/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/buffer-image)
 
-My awesome module.
+Convert a buffer to and from png image data.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/buffer-image.png)](https://npmjs.com/package/buffer-image)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install buffer-image
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const bufferImage = require("buffer-image");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+	const image = await bufferImage(Buffer.from("Hello World"));
+
+	const result = await bufferImage.from(image)
+	console.log(result.toString())
+	//=> "Hello World"
+})()
 ```
 
 ## API
 
-### theModule(input, options?)
+### bufferImage(input)
+
+Convert a buffer to a png buffer.
+
+### bufferImage.from(input)
+
+Convert a png buffer to a buffer.
 
 #### input
 
 Type: `string`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The buffer to convert.

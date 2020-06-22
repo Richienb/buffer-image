@@ -1,13 +1,7 @@
 const test = require("ava")
-const theModule = require(".")
+const bufferImage = require(".")
 
-test("main", t => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number"
-	})
-
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+test("main", async t => {
+	const result = Buffer.from("Hello World")
+	t.deepEqual(await bufferImage.from(await bufferImage(result)), result)
 })
